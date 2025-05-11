@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Queere Filme & Serien – Mai 2025</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        h1 { text-align: center; }
+        h2 { margin-top: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        tr:hover { background-color: #f9f9f9; }
+        input[type="text"] { width: 100%; padding: 8px; margin-bottom: 20px; }
+        button.copy-btn { padding: 4px 8px; }
+    </style>
+    <script>
+        function searchTable(inputId, tableId) {
+            var input = document.getElementById(inputId);
+            var filter = input.value.toLowerCase();
+            var table = document.getElementById(tableId);
+            var tr = table.getElementsByTagName("tr");
+
+            for (var i = 1; i < tr.length; i++) {
+                var td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    var txtValue = td.textContent || td.innerText;
+                    tr[i].style.display = txtValue.toLowerCase().includes(filter) ? "" : "none";
+                }
+            }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Kopiert: ' + text);
+            }, function(err) {
+                alert('Fehler beim Kopieren');
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Queere Filme & Serien – Mai 2025</h1>
+
+    <h2>Filme</h2>
+    <input type="text" id="searchfilme" onkeyup="searchTable('searchfilme', 'tablefilme')" placeholder="Suche nach Titel...">
+    <table id="tablefilme">
+    <tr><th>Titel</th><th>Typ</th><th>Erscheinungsdatum</th><th>Aktion</th><th>Streaming-Suche</th></tr>
+    
+        <tr>
+            <td>Feste und Freunde</td>
+            <td>Film</td>
+            <td>02/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Feste und Freunde')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Feste+und+Freunde" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Oslo Stories: Träume</td>
+            <td>Film</td>
+            <td>08/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Oslo Stories: Träume')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Oslo+Stories%3A+Tr%C3%A4ume" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Fear Street: Prom Queen</td>
+            <td>Film</td>
+            <td>23/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Fear Street: Prom Queen')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Fear+Street%3A+Prom+Queen" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>On Swift Horses</td>
+            <td>Film</td>
+            <td>29/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('On Swift Horses')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=On+Swift+Horses" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Blindgänger</td>
+            <td>Film</td>
+            <td>Mai 2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Blindgänger')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Blindg%C3%A4nger" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Nur noch ein kleiner Gefallen</td>
+            <td>Film</td>
+            <td>01/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Nur noch ein kleiner Gefallen')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Nur+noch+ein+kleiner+Gefallen" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Freud - Jenseits des Glaubens</td>
+            <td>Film</td>
+            <td>20/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Freud - Jenseits des Glaubens')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Freud+-+Jenseits+des+Glaubens" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Klandestin</td>
+            <td>Film</td>
+            <td>24/04/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Klandestin')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Klandestin" target="_blank">Streaming finden</a></td>
+        </tr>
+        </table>
+    <h2>Serien & Staffeln</h2>
+    <input type="text" id="searchserien" onkeyup="searchTable('searchserien', 'tableserien')" placeholder="Suche nach Titel...">
+    <table id="tableserien">
+    <tr><th>Titel</th><th>Typ</th><th>Erscheinungsdatum</th><th>Aktion</th><th>Streaming-Suche</th></tr>
+    
+        <tr>
+            <td>The Four Seasons</td>
+            <td>Staffel</td>
+            <td>01/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('The Four Seasons')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=The+Four+Seasons" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Bet</td>
+            <td>Staffel</td>
+            <td>15/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Bet')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Bet" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Überkompensation</td>
+            <td>Staffel</td>
+            <td>15/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Überkompensation')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=%C3%9Cberkompensation" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Boarders</td>
+            <td>Staffel</td>
+            <td>16/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Boarders')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Boarders" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Big Mouth</td>
+            <td>Staffel</td>
+            <td>23/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Big Mouth')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Big+Mouth" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>The Second Best Hospital In The Galaxy</td>
+            <td>Staffel</td>
+            <td>27/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('The Second Best Hospital In The Galaxy')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=The+Second+Best+Hospital+In+The+Galaxy" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>9-1-1 Notruf L.A.</td>
+            <td>Staffel</td>
+            <td>28/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('9-1-1 Notruf L.A.')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=9-1-1+Notruf+L.A." target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Lost Boys and Fairies</td>
+            <td>Staffel</td>
+            <td>29/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Lost Boys and Fairies')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Lost+Boys+and+Fairies" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>And Just Like That</td>
+            <td>Staffel</td>
+            <td>29/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('And Just Like That')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=And+Just+Like+That" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>The Handmaid's Tale</td>
+            <td>Staffel</td>
+            <td>08/04/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('The Handmaid's Tale')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=The+Handmaid%27s+Tale" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>The Last Of Us</td>
+            <td>Staffel</td>
+            <td>14/04/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('The Last Of Us')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=The+Last+Of+Us" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Grey's Anatomy</td>
+            <td>Staffel</td>
+            <td>28/04/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Grey's Anatomy')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Grey%27s+Anatomy" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Murderbot</td>
+            <td>Staffel</td>
+            <td>16/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Murderbot')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Murderbot" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Nine Perfect Strangers</td>
+            <td>Serie</td>
+            <td>Mai 2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Nine Perfect Strangers')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Nine+Perfect+Strangers" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Twisted Metal</td>
+            <td>Staffel</td>
+            <td>28/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Twisted Metal')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Twisted+Metal" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Alone Together</td>
+            <td>Staffel</td>
+            <td>07/02/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Alone Together')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Alone+Together" target="_blank">Streaming finden</a></td>
+        </tr>
+        </table>
+    <h2>Sonstige Formate</h2>
+    <input type="text" id="searchsonst" onkeyup="searchTable('searchsonst', 'tablesonst')" placeholder="Suche nach Titel...">
+    <table id="tablesonst">
+    <tr><th>Titel</th><th>Typ</th><th>Erscheinungsdatum</th><th>Aktion</th><th>Streaming-Suche</th></tr>
+    
+        <tr>
+            <td>Octopus!</td>
+            <td>Dokumentation</td>
+            <td>08/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Octopus!')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Octopus%21" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Lulu is a Rhinoceros</td>
+            <td>Musical-Special</td>
+            <td>30/05/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Lulu is a Rhinoceros')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Lulu+is+a+Rhinoceros" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>ToGetHer</td>
+            <td>Datingshow</td>
+            <td>25/04/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('ToGetHer')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=ToGetHer" target="_blank">Streaming finden</a></td>
+        </tr>
+        
+        <tr>
+            <td>Jessica Kirson: I'm the Man</td>
+            <td>Stand-up-Special</td>
+            <td>24/04/2025</td>
+            <td><button class="copy-btn" onclick="copyToClipboard('Jessica Kirson: I'm the Man')">Kopieren</button></td>
+            <td><a href="https://www.justwatch.com/de/suche?q=Jessica+Kirson%3A+I%27m+the+Man" target="_blank">Streaming finden</a></td>
+        </tr>
+        </table></body></html>
